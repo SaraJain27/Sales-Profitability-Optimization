@@ -13,7 +13,7 @@ SELECT
     SUM(Quantity) AS units
 FROM sales_profitability;
 
-2. Monthly Sales & Profitability Trend
+-- 2. Monthly Sales & Profitability Trend
 -- Analyzes revenue, profit, and profit margin by year and month
 -- to identify monthly performance trends.
     
@@ -68,7 +68,7 @@ ORDER BY
     profit_margin;
 
 
- 5. Discount Impact Analysis
+ -- 5. Discount Impact Analysis
 -- Groups transactions into discount bands and evaluates
 -- revenue, profit, profit margin, and order volume for each band.
      
@@ -99,7 +99,7 @@ GROUP BY
         ELSE '40-55%'
     END;
 
-6. Category & Subcategory Profitability Analysis
+-- 6. Category & Subcategory Profitability Analysis
 -- Evaluates revenue, profit, and profit margin at the
 -- category and subcategory level to identify strong performers.
     
