@@ -6,7 +6,7 @@ A data analytics and business intelligence project focused on analyzing sales pe
 
 The objective of this project is to transform sales transaction data into meaningful business insights that can support better pricing, product, regional, and channel-level decisions.
 
-Python is used for data analysis, PostgreSQL for structured SQL analysis, and Power BI for interactive business visualization.
+Python is used for data analysis and validation, PostgreSQL is used for structured SQL analysis, and Power BI is used to create an interactive business intelligence dashboard.
 
 ## Business Objectives
 
@@ -36,12 +36,17 @@ Sales-Profitability-Optimization/
 ├── data/
 │   └── sales_profitability.csv
 │
+├── sql/
+│   └── analysis_queries.sql
+│
 ├── src/
 │   ├── analysis.py
 │   └── load_sales_data.py
 │
-├── sql/
-│   └── analysis_queries.sql
+├── powerbi/
+│   ├── Sales_Profitability_Dashboard.pbix
+│   ├── dashboard_page1.png
+│   └── dashboard_page2.png
 │
 ├── README.md
 └── requirements.txt
