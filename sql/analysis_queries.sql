@@ -1,5 +1,8 @@
 
 
+-- 1. Overall Business Performance / KPI Analysis
+-- Calculates overall revenue, cost, profit, profit margin,
+-- number of orders, and total units sold.
 
 SELECT
     SUM(Revenue) AS total_revenue,
@@ -10,7 +13,10 @@ SELECT
     SUM(Quantity) AS units
 FROM sales_profitability;
 
-
+2. Monthly Sales & Profitability Trend
+-- Analyzes revenue, profit, and profit margin by year and month
+-- to identify monthly performance trends.
+    
 SELECT
     EXTRACT(YEAR FROM Order_Date) AS year,
     EXTRACT(MONTH FROM Order_Date) AS month,
@@ -25,6 +31,9 @@ ORDER BY
     year,
     month;
 
+-- 3. Category Profitability Analysis
+-- Compares revenue, profit, profit margin, and average discount
+-- across product categories.
 
 SELECT
     Category,
@@ -36,6 +45,9 @@ FROM sales_profitability
 GROUP BY Category
 ORDER BY profit DESC;
 
+-- 4. Low-Margin Region, Category & Channel Analysis
+-- Identifies combinations of region, category, and channel
+-- performing below the overall business profit margin benchmark.
 
 SELECT
     Region,
@@ -56,7 +68,10 @@ ORDER BY
     profit_margin;
 
 
-
+ 5. Discount Impact Analysis
+-- Groups transactions into discount bands and evaluates
+-- revenue, profit, profit margin, and order volume for each band.
+     
 SELECT
     CASE
         WHEN Discount <= 0.05 THEN '0-5%'
@@ -84,7 +99,10 @@ GROUP BY
         ELSE '40-55%'
     END;
 
-
+6. Category & Subcategory Profitability Analysis
+-- Evaluates revenue, profit, and profit margin at the
+-- category and subcategory level to identify strong performers.
+    
 SELECT
     Category,
     Subcategory,
@@ -98,6 +116,9 @@ GROUP BY
 ORDER BY
     profit_margin DESC;
 
+-- 7. Channel Performance Analysis
+-- Compares revenue, profit, profit margin, and average discount
+-- across sales channels.
 
 SELECT
     Channel,
@@ -110,6 +131,9 @@ GROUP BY Channel
 ORDER BY profit DESC;
 
 
+-- 8. Regional Profitability Analysis
+-- Compares revenue, profit, and profit margin across regions
+-- to identify regional performance differences.
 
 SELECT
     Region,
